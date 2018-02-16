@@ -1,0 +1,6 @@
+use_frameworks!
+target 'CocoaLibEvent_Tests' do
+  pod 'CocoaLibEvent', :path => '../'
+  
+  
+end

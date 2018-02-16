@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CocoaLibEvent'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of CocoaLibEvent.'
+  s.version          = '1.0.0'
+  s.summary          = 'IOS LibEvent.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,17 +21,21 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/99789999@qq.com/CocoaLibEvent'
+  s.homepage         = 'https://github.com/e314521/CocoaLibEvent'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '99789999@qq.com' => '99789999@qq.com' }
-  s.source           = { :git => 'https://github.com/99789999@qq.com/CocoaLibEvent.git', :tag => s.version.to_s }
+  s.author           = { 'e314521' => '99789999@qq.com' }
+  s.source           = { :git => 'https://github.com/e314521/CocoaLibEvent.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CocoaLibEvent/Classes/**/*'
-  
+  s.header_mappings_dir = "src"
+  s.public_header_files = 'src/*.h', 'src/**/*.{h}'
+  s.source_files  = 'src/*.{h}', 'src/**/*.{h}'
+  s.preserve_paths = 'src/*.{h,c}', 'src/**/*.{h}'
+  s.ios.vendored_libraries = 'lib/*.a'
+  s.requires_arc = false
   # s.resource_bundles = {
   #   'CocoaLibEvent' => ['CocoaLibEvent/Assets/*.png']
   # }
